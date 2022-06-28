@@ -1,30 +1,10 @@
-arr = list(input().split())
-arr_int =list(map(int, arr))
+location = input() # 현재 좌표 입력 ex) a1
+x = ord(location[0])
+y = int(location[1]) # 1
+test = int(ord('a'))
+test2 = int(ord(location[0]))
 
-arr_int.sort()
-arr_len = len(arr)
-lr = []
+print(x, y)
 
-for i in range(1, arr_len+1):
-    lr.append(i)
-
-if arr_int == lr:
-    print(True)
-else:
-    print(False)
-
-def solution(arr):
-    arr_int = list(map(int, arr))
-    arr_int.sort()
-    arr_len = len(arr_int)
-    lr = []
-
-    for i in range(1, arr_len+1):
-        lr.append(i)
-
-    if arr_int == lr:
-        return True
-    else:
-        return False
-
-print(solution([4,1,3,2]))
+print(test)
+print(test2)

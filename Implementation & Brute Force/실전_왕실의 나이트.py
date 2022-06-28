@@ -1,16 +1,21 @@
-input_data = input()
-row = int(input_data[1])
-column = int(ord(input_data[0])) - int(ord('a')) + 1
+# 왕실의 나이트
 
-steps = [(-2, -1), (-1, -2), (1, -2), (2, -1), (2, 1), (1, 2), (-1, 2), (-2, 1)]
+location = input() # 현재 좌표 입력 ex) a1
+x = int(ord(location[0])) - int(ord('a')) + 1 # a
+y = int(location[1]) # 1
 
-result = 0
+move = [(-2, -1), (-1, -2),
+        (1, -2), (2, -1),
+        (2, 1), (1, 2),
+        (-1, 2), (-2, 1)] # 이동 가능한 좌표
 
-for step in steps:
-    next_row = row + step[0]
-    next_column = column + step[1]
+count = 0
 
-    if next_row >= 1 and next_row <= 8 and next_column >= 1 and next_column <= 8:
-        result += 1
+for i in move:
+    nx = x + i[0]
+    ny = y + i[1]
 
-print(result)
+    if nx >= 1 and nx <= 8 and ny >= 1 and ny <= 8:
+        count += 1
+
+print(count)
